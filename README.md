@@ -16,8 +16,6 @@ For example:
 - Sort alphabetically, filter by published.
 - Data should be stored in a database of your choice.
 
-Certainly! Here's an updated version for your README:
-
 ---
 
 ## Project Setup Instructions
