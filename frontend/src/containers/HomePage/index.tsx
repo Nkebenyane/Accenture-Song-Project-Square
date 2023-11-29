@@ -1,52 +1,21 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Hero from "../../components/Hero";
 import { images } from "../../theme";
 import {
   Flex,
-  FlexProps,
-  Spinner,
   Text,
-  SpinnerProps,
-  ChakraProps,
   Box,
-  SimpleGrid,
   Grid,
   GridItem,
 } from "@chakra-ui/react";
-import styled from "@emotion/styled";
 import { useMediaQuery } from "@chakra-ui/react";
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
 import CardWrapper from "../../components/CardWrapper";
 import CaseStudiesCard from "../../components/CaseStudiesCard";
-import { wait } from "@testing-library/user-event/dist/utils";
 import { retrievBrands } from "../../utils/api";
 import Footer from "../../components/Footer";
 
-const Wrapper = styled(Flex)<FlexProps & ChakraProps>`
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: start;
-  background-size: cover;
-  justify-content: center;
-  width: 100%;
-  flex-direction: column;
-`;
-
 const HomePage: React.FC = () => {
   const [isLargerThan1280] = useMediaQuery("(min-width: 1280px)");
-  // const [brands, setBrand] = useState();
-
-  // const getBrands = async () => {
-  //   const data = await retrievBrands();
-
-  //   return data;
-  //   console.log("give me brands here === ", brands);
-  // };
-
-  // setBrand(await getBrands());
 
   const [data, setData] = useState([
     { id: "", name: "", logo: "", published: "" },
@@ -206,14 +175,20 @@ const HomePage: React.FC = () => {
         <Grid
           templateColumns={{
             base: "repeat(1, 1fr)",
-            md: "repeat(4, 1fr)", // 4 columns on medium screens and larger
+            md: "repeat(5, 2fr)",
           }}
           gap={4}
           justifyContent="center"
+          p={4}
         >
           {filteredAndSortedArray.map((item) => (
-            <GridItem key={item.id}>
-              <img src={item.logo} alt="Logo" />
+            <GridItem key={item.id} flexShrink={0} p={5}>
+              <img
+                src={item.logo}
+                alt="Logo"
+                width={"85.633px"}
+                height={"100px"}
+              />
             </GridItem>
           ))}
         </Grid>

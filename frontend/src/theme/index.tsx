@@ -29,7 +29,7 @@ const theme = {
     },
   },
   boxShadow: "0px 0px 6px rgba(0, 0, 0, 0.28)",
-  gridGutter: 1, // rem - taken from Chakra UI space scale https://chakra-ui.com/theme#spacing
+  gridGutter: 1,
 };
 
 export { theme, images };

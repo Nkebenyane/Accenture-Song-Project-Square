@@ -11,11 +11,9 @@ import {
   useColorModeValue,
   useDisclosure,
   Image,
-  FlexProps,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { images } from "../theme";
-import { Route, RouteProps } from "react-router";
 import HomePage from "../containers/HomePage";
 
 
