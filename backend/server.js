@@ -9,7 +9,9 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017/testDB', { useNewUrlParser: true, useUnifiedTopology: true })
+
+
+mongoose.connect('mongodb://localhost:27017/brandImagesDB', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('Connected to MongoDB');
 
@@ -38,13 +40,78 @@ async function insertInitialData() {
         if (brandsCount === 0) {
             await Brand.insertMany([
                 {
-                    name: 'visaBlack',
-                    logo: './assets/images/visa-black.png',
+                    name: 'visa',
+                    logo: 'https://i.imgur.com/BQYUoYl.png',
                     published: true,
                 },
                 {
-                    name: 'tymeBank',
-                    logo: './assets/images/tyme-bank-black.png',
+                    name: 'tyme',
+                    logo: 'https://i.imgur.com/5fufAQt.png',
+                    published: true,
+                },
+                {
+                    name: 'liquid',
+                    logo: 'https://i.imgur.com/JToptvL.png',
+                    published: true,
+                },
+                {
+                    name: 'tgf',
+                    logo: 'https://i.imgur.com/erH3LL3.png',
+                    published: true,
+                },
+                {
+                    name: 'santam',
+                    logo: 'https://i.imgur.com/Atcoqc8.png',
+                    published: true,
+                },
+                {
+                    name: 'bbc',
+                    logo: 'https://i.imgur.com/iVOJ92G.png',
+                    published: true,
+                },
+                {
+                    name: 'pnp',
+                    logo: 'https://i.imgur.com/DAmuUvE.png',
+                    published: true,
+                },
+                {
+                    name: 'multichoce',
+                    logo: 'https://i.imgur.com/yn7t7j7.png',
+                    published: true,
+                },
+                {
+                    name: 'wesgrow',
+                    logo: 'https://i.imgur.com/7qdVW30.png',
+                    published: true,
+                },
+                {
+                    name: 'nike',
+                    logo: 'https://i.imgur.com/BCk2s5w.png',
+                    published: true,
+                },
+                {
+                    name: 'engen',
+                    logo: 'https://i.imgur.com/ZC68IVq.png',
+                    published: true,
+                },
+                {
+                    name: 'microsoft',
+                    logo: 'https://i.imgur.com/PT2GoOB.png',
+                    published: true,
+                },
+                {
+                    name: 'spotify',
+                    logo: 'https://i.imgur.com/ydEnLN8.png',
+                    published: true,
+                },
+                {
+                    name: 'distell',
+                    logo: 'https://i.imgur.com/MbDmzPQ.png',
+                    published: true,
+                },
+                {
+                    name: 'sanlam',
+                    logo: 'https://i.imgur.com/OvullUc.png',
                     published: true,
                 },
             ]);

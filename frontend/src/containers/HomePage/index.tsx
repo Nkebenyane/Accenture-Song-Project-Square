@@ -10,6 +10,8 @@ import {
   ChakraProps,
   Box,
   SimpleGrid,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { useMediaQuery } from "@chakra-ui/react";
@@ -47,7 +49,7 @@ const HomePage: React.FC = () => {
   // setBrand(await getBrands());
 
   const [data, setData] = useState([
-    { id: "", name: "", log: "", published: "" },
+    { id: "", name: "", logo: "", published: "" },
   ]);
 
   useEffect(() => {
@@ -150,7 +152,6 @@ const HomePage: React.FC = () => {
           </Text>
         </Flex>
         <Flex
-          // p={{ base: 4, md: 4 }}
           w="100%"
           direction={{ base: "column-reverse", md: "row" }}
           justifyContent={"center"}
@@ -202,21 +203,22 @@ const HomePage: React.FC = () => {
         >
           Trusted by leading brands
         </Text>
-        <Flex
-          w="100%"
-          direction={{ base: "column-reverse", md: "row" }}
-          justifyContent={"center"}
+        <Grid
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            md: "repeat(4, 1fr)", // 4 columns on medium screens and larger
+          }}
+          gap={4}
+          justifyContent="center"
         >
           {filteredAndSortedArray.map((item) => (
-            <Flex key={item.id} alignItems="center">
-              <img src={item.log} alt="Brand" />
-
-              <Text>{item.name}</Text>
-            </Flex>
+            <GridItem key={item.id}>
+              <img src={item.logo} alt="Logo" />
+            </GridItem>
           ))}
-        </Flex>
+        </Grid>
       </Flex>
-      <Footer/>
+      <Footer />
     </Box>
   );
 };
