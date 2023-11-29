@@ -1,140 +1,3 @@
-// import { ReactNode } from "react";
-
-// import {
-//   Box,
-//   Container,
-//   Flex,
-//   SimpleGrid,
-//   Stack,
-//   Text,
-//   useColorModeValue,
-// } from "@chakra-ui/react";
-// import { images } from "../../theme";
-
-// const Heading = (props: any) => {
-//   return (
-//     <Box width={"100%"}>
-//       <Flex direction="row">
-//         <img src={images.rectangle} alt="Logo" />
-//         <Text
-//           pl={4}
-//           fontFamily={"Inter"}
-//           lineHeight={"120%"}
-//           fontSize={"24px"}
-//           width={"400px"}
-//           color={"white"}
-//         >
-//           Contact us{" "}
-//         </Text>
-//       </Flex>
-//       <Text
-//         color={"white"}
-//         display={"flex"}
-//         flexDirection={"column"}
-//         justifyContent={"center"}
-//         flexShrink={0}
-//         fontSize={"40px"}
-//         fontWeight={700}
-//         fontFamily={"Inter"}
-//         lineHeight={"140%"}
-//         mt={4}
-//         height={"112.224px"}
-//         width={"455px"}
-//       >
-//         Have a project in mind? Let's make it happen
-//       </Text>
-//     </Box>
-//   );
-// };
-
-// export default function Footer() {
-//   return (
-//     <Box
-//       bg={useColorModeValue("brand.900", "gray.900")}
-//       color={useColorModeValue("gray.700", "gray.200")}
-//       p={20}
-//     >
-//       <Flex direction={"column"} color={"white"}>
-//         <Flex direction={"row"} justifyContent={"space-between"}>
-//           <Box p={4}>
-//             <Heading color={useColorModeValue("gray.700", "white")} />
-//           </Box>
-
-//           <Flex direction={"column"} mt={59} color={"white"}>
-//             <Box as="a" href={"#"}>
-//               22 Street Name, Suburb, 8000,
-//             </Box>
-//             <Box as="a" href={"#"}>
-//               Cape Town, South Africa
-//             </Box>
-//             <Box as="a" href={"#"}>
-//               +27 21 431 0001
-//             </Box>
-//             <Box as="a" href={"#"}>
-//               enquirie@website.co.za
-//             </Box>
-//           </Flex>
-//         </Flex>
-
-//     <Flex direction={"row"} justifyContent={"space-between"} p={4}>
-//       <Flex direction={"column"}>
-//         <Box as="a" href={"#"}>
-//           Terms of service
-//         </Box>
-//         <Box as="a" href={"#"}>
-//           Privacy policy
-//         </Box>
-//         <Box as="a" href={"#"}>
-//           Impressum
-//         </Box>
-//       </Flex>
-//       <Flex direction={"column"}>
-//         <Box as="a" href={"#"}>
-//           Facebook
-//         </Box>
-//         <Box as="a" href={"#"}>
-//           Instagram
-//         </Box>
-//         <Box as="a" href={"#"}>
-//           Twitter
-//         </Box>
-//       </Flex>
-//       <Flex direction={"column"}>
-//         <Box as="a" href={"#"}>
-//           Github
-//         </Box>
-//         <Box as="a" href={"#"}>
-//           Linkedin
-//         </Box>
-//         <Box as="a" href={"#"}>
-//           Teams
-//         </Box>
-//       </Flex>
-//       <Flex direction={"column"}>
-//         <Box as="a" href={"#"}>
-//           Youtube
-//         </Box>
-//         <Box as="a" href={"#"}>
-//           Behance
-//         </Box>
-//         <Box as="a" href={"#"}>
-//           Dribbble
-//         </Box>
-//       </Flex>
-//       <Flex direction={"column"}>
-//         <Box as="a" href={"#"}>
-//           Explore open jobs
-//         </Box>
-//         <Box as="a" href={"#"}>
-//           ©2000—2023 Company Name
-//         </Box>
-//       </Flex>
-//     </Flex>
-//   </Flex>
-//     </Box>
-//   );
-// }
-
 import { Box, Flex, Text, useColorModeValue, Stack } from "@chakra-ui/react";
 import { images } from "../../theme";
 
@@ -161,8 +24,8 @@ const Heading = () => {
         fontFamily={"Inter"}
         lineHeight={"140%"}
         mt={4}
-        width={"100%"}
-      >
+        width={{ base: "auto", md: "56%" }}
+        >
         Have a project in mind? Let's make it happen
       </Text>
     </Stack>
@@ -216,6 +79,7 @@ const Footer = () => {
         p={4}
         color={"white"}
         mt={10}
+        textAlign={{ base: "center", md: "left" }}
       >
         <Flex direction={"column"}  p={4}>
           <Box as="a" href={"#"}>

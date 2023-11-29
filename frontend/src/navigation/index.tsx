@@ -16,7 +16,6 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { images } from "../theme";
 import HomePage from "../containers/HomePage";
 
-
 interface NavItem {
   label: string;
   component?: any;
@@ -151,29 +150,27 @@ const Navbar: React.FC = () => {
         </Flex>
 
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Image
-            width="100px"
-            height="30.769px"
-            alignItems="center"
-            flexShrink={"0"}
-            src={images.logo}
-            display="inline-block"
-            alignSelf="center"
-            alt="logo"
-          />
+          <Flex ml={100}>
+            <Image
+              width="100px"
+              height="30.769px"
+              alignItems="center"
+              flexShrink={"0"}
+              src={images.logo}
+              display="inline-block"
+              alignSelf="center"
+              alt="logo"
+            />
+          </Flex>
 
-          <Flex display={{ base: "none", md: "center" }} ml={10}>
+          <Flex display={{ base: "none", md: "center" }} ml={350}>
             <DesktopNav />
           </Flex>
         </Flex>
 
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={"flex-end"}
-          direction={"row"}
-          spacing={6}
-        >
+        <Flex direction={"row"}>
           <Button
+            mr={124}
             as={"a"}
             display={{ base: "none", md: "inline-flex" }}
             fontSize={"sm"}
@@ -184,18 +181,18 @@ const Navbar: React.FC = () => {
             bg={"white"}
             href={"#"}
             _hover={{
-              bg: "pink.300",
+              bg: "brand.300",
             }}
           >
             Let’s Talk{" "}
           </Button>
-        </Stack>
+        </Flex>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
-      <HomePage/>
+      <HomePage />
     </Box>
   );
 };

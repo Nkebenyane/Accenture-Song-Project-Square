@@ -1,22 +1,5 @@
-import {
-  Button,
-  ButtonGroup,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Divider,
-  Flex,
-  Heading,
-  Image,
-  SimpleGrid,
-  Stack,
-  Text,
-  useMediaQuery,
-} from "@chakra-ui/react";
+import { Card, CardBody, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
-
-import { images, theme } from "../../theme";
 
 type CardWrapperProps = {
   cardImage: string;
@@ -29,8 +12,6 @@ const CardWrapper: React.FC<CardWrapperProps> = ({
   title,
   body,
 }) => {
-  const [isLargerThan1280] = useMediaQuery("(min-width: 1280px)");
-
   return (
     <Card maxW="sm" boxShadow={"none"}>
       <CardBody>

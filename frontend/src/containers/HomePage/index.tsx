@@ -164,18 +164,23 @@ const HomePage: React.FC = () => {
         <Grid
           templateColumns={{
             base: "repeat(1, 1fr)",
-            md: "repeat(5, 2fr)",
+            md: "repeat(5, 1fr)",
           }}
           gap={4}
           justifyContent="center"
           p={4}
         >
           {filteredAndSortedArray.map((item) => (
-            <GridItem key={item.id} flexShrink={0} p={5}>
+            <GridItem
+              key={item.id}
+              flexShrink={0}
+              p={5}
+              textAlign={{ base: "center", md: "center" }}
+            >
               <img
                 src={item.logo}
                 alt="Logo"
-                width={"85.633px"}
+                width={"95.633px"}
                 height={"100px"}
               />
             </GridItem>
