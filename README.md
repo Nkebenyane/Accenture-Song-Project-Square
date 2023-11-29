@@ -16,24 +16,45 @@ For example:
 - Sort alphabetically, filter by published.
 - Data should be stored in a database of your choice.
 
-## Instructions on how to get the project running.
-  
-#### use node 16
+Certainly! Here's an updated version for your README:
 
-### FRONTEND
+---
 
-#### cd frontend
+## Project Setup Instructions
 
-- run `yarn` to install packages
-
-- run `yarn start` to start the app
-
-### BACKEND
-
-### Database: 
+### Requirements
+- Node.js v16
 - MongoDB
 
-#### cd backend
+### Frontend Setup
+1. Navigate to the `frontend` directory.
+    ```bash
+    cd frontend
+    ```
+2. Install the required packages using `yarn`.
+    ```bash
+    yarn
+    ```
+3. Start the application.
+    ```bash
+    yarn start
+    ```
 
-- run `yarn` to install packages
-- run `yarn start` to start the server
+### Backend Setup
+#### Database
+- MongoDB is used as the database.
+
+1. Navigate to the `backend` directory.
+    ```bash
+    cd backend
+    ```
+2. Install the required packages using `yarn`.
+    ```bash
+    yarn
+    ```
+3. Start the server.
+    ```bash
+    yarn start
+    ```
+
+These steps will help you set up both the frontend and backend parts of the project.
