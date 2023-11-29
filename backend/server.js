@@ -9,18 +9,14 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-
-
 mongoose.connect('mongodb://localhost:27017/brandImagesDB', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('Connected to MongoDB');
 
-        // Start your server once connected
         app.listen(3001, () => {
             console.log('Server is running on port 3001');
         });
 
-        // Add data insertion logic here
         insertInitialData();
     })
     .catch((err) => {
@@ -31,7 +27,6 @@ const Brand = mongoose.model('Brand', {
     name: String,
     logo: String,
     published: Boolean,
-    // ... other properties
 });
 
 async function insertInitialData() {
@@ -124,9 +119,9 @@ async function insertInitialData() {
     }
 }
 app.use(cors({
-    origin: 'http://localhost:3000', // Replace with your frontend URL
-  }));
-  
+    origin: 'http://localhost:3000',
+}));
+
 // Retrieve brands with filtering and sorting
 app.get('/brands', async (req, res) => {
     let sortField = 'name';
@@ -139,8 +134,6 @@ app.get('/brands', async (req, res) => {
 
     try {
         const brands = await Brand.find({ published: true }).sort({ [sortField]: sortDirection });
-
-
         return res.status(200).json({
             brands,
         });

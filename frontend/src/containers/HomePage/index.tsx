@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Hero from "../../components/Hero";
 import { images } from "../../theme";
-import {
-  Flex,
-  Text,
-  Box,
-  Grid,
-  GridItem,
-} from "@chakra-ui/react";
+import { Flex, Text, Box, Grid, GridItem } from "@chakra-ui/react";
 import { useMediaQuery } from "@chakra-ui/react";
 import CardWrapper from "../../components/CardWrapper";
 import CaseStudiesCard from "../../components/CaseStudiesCard";
@@ -17,7 +11,7 @@ import Footer from "../../components/Footer";
 const HomePage: React.FC = () => {
   const [isLargerThan1280] = useMediaQuery("(min-width: 1280px)");
 
-  const [data, setData] = useState([
+  const [filteredAndSortedArray, setFilteredAndSortedArray] = useState([
     { id: "", name: "", logo: "", published: "" },
   ]);
 
@@ -26,19 +20,14 @@ const HomePage: React.FC = () => {
       try {
         const result = await retrievBrands();
 
-        setData(result);
+        setFilteredAndSortedArray(result);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
     fetchData();
-  }, [data]);
-
-  // Filtered array with objects where published is true
-  const filteredAndSortedArray = data
-    .filter((item) => item.published)
-    .sort((a, b) => (a.name > b.name ? 1 : -1)); // Sort alphabetically by name
+  }, [filteredAndSortedArray]);
 
   console.log(filteredAndSortedArray);
 
