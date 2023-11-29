@@ -133,6 +133,8 @@ const Navbar: React.FC = () => {
         borderStyle={"solid"}
         borderColor={useColorModeValue("gray.200", "gray.900")}
         align={"center"}
+        p={'0px 89px 0px 75px'}
+
       >
         <Flex
           flex={{ base: 1, md: "auto" }}
@@ -150,7 +152,11 @@ const Navbar: React.FC = () => {
         </Flex>
 
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Flex ml={100}>
+          <Flex
+            p={{ base: 4, md: 4 }}
+            w="100%"
+            direction={{ base: "column-reverse", md: "row" }}
+          >
             <Image
               width="100px"
               height="30.769px"
@@ -158,24 +164,29 @@ const Navbar: React.FC = () => {
               flexShrink={"0"}
               src={images.logo}
               display="inline-block"
-              alignSelf="center"
+              // alignSelf="center"
               alt="logo"
             />
           </Flex>
 
-          <Flex display={{ base: "none", md: "center" }} ml={350}>
+          <Flex
+            display={{ base: "none", md: "center" }}
+            p={{ base: 4, md: 4 }}
+            w="100%"
+            direction={{ base: "column-reverse", md: "row" }}
+          >
             <DesktopNav />
           </Flex>
         </Flex>
 
         <Flex direction={"row"}>
           <Button
-            mr={124}
+            p={{ base: 4, md: 4 }}
+            w="100%"
             as={"a"}
             display={{ base: "none", md: "inline-flex" }}
             fontSize={"sm"}
             fontWeight={600}
-            p={"8px 16px"}
             borderRadius={"50px"}
             color={"brand.900"}
             bg={"white"}
