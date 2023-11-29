@@ -15,23 +15,25 @@ Requirements:
 For example:
 - Sort alphabetically, filter by published.
 - Data should be stored in a database of your choice.
+
+## Instructions on how to get the project running.
   
 #### use node 16
 
-## FRONTEND
+### FRONTEND
 
-### cd frontend
+#### cd frontend
 
-run `yarn` to install packages
+- run `yarn` to install packages
 
-run `yarn start` to start the app
+- run `yarn start` to start the app
 
-## BACKEND
+### BACKEND
 
 ### Database: 
 - MongoDB
 
-### cd backend
+#### cd backend
 
-run `yarn` to install packages
-run `yarn start` to start the server
+- run `yarn` to install packages
+- run `yarn start` to start the server
