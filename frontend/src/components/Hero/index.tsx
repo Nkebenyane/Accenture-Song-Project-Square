@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
     <Flex
       w={"full"}
       h={"600px"}
-      backgroundImage={`url(https://s3-alpha-sig.figma.com/img/3ec6/8a20/a699946a99481a2e13a2b236b4db254e?Expires=1702252800&Signature=NZLmO0-p7iaqjzT7UaGazoO3i0zAUMdK87lfqQfGHEVwvMRDlHEw4ugfogAUlqoq600nE19yEpUWSt~IxcpTEVb2oUgHyX47z4qq1ClZp6mY8bVuWQfP9URld7UBSrHu19uGHnYwIkfu-AtmVZcBQ-3hXDpKmJLLMJWHYRhO17lcwXHqZk~IdMPG9prvqUi4bHHzg2OWQwZNMxJ8SRo7QvdLBcqTxfFEJg-c3gPGMX1so9o6DXCtgaO43LZmyEc1QePTe~fOMqJ3KNYViwSlf~uTE~II0cU7HDKyDjwbDDJLQoQ1chlo83jnc0CsTuWcOcG9FNGiUlv6WsX-zuTxLg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4)`}
+      backgroundImage={`url(https://i.imgur.com/apMzb6x.jpg)`}
       backgroundSize={"cover"}
       backgroundPosition={"center center"}
       direction={"row"} p={0} mt={-2}
