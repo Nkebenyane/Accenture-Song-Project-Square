@@ -1,30 +1,31 @@
-# Accenture-Song-Project-Square
+# Accenture Song Project Square
 
-Requirements:
-### Front-end:
-- Single page coded with React.
-- Responsive layout.
-- Use any preferred compiler to build & run your site.
-- Case studies should be implemented as a slider.
-- Brands retrieved via API (back-end portion of this test).
-- UI component to sort & filter brands.
-### Back-end:
-- Build API to retrieve data for Trusted by leading brands section.
+## Requirements
+
+### Front-end
+- Single-page application built with React.
+- Responsive layout design.
+- Use any preferred compiler to build & run the site.
+- Implement case studies as a slider.
+- Fetch brands via API (back-end portion of this test).
+- UI component for sorting & filtering brands.
+
+### Back-end
+- Build an API to retrieve data for the "Trusted by leading brands" section.
 - Ability to filter and sort brands.
-- Coded with NodeJS (or similar JavaScript framework)
-For example:
-- Sort alphabetically, filter by published.
+- Developed with Node.js (or similar JavaScript framework).
+- Example functionalities include alphabetical sorting and filtering by publication status.
 - Data should be stored in a database of your choice.
 
 ---
 
 ## Project Setup Instructions
 
-### Requirements
-- Node.js v16
-- MongoDB
-
 ### Frontend Setup
+
+#### Requirements
+- Node.js v16
+
 1. Navigate to the `frontend` directory.
     ```bash
     cd frontend
@@ -39,7 +40,12 @@ For example:
     ```
 
 ### Backend Setup
-#### Database
+
+#### Requirements
+- Node.js v18
+- MongoDB
+
+##### Database
 - MongoDB is used as the database.
 
 1. Navigate to the `backend` directory.
@@ -56,3 +62,13 @@ For example:
     ```
 
 These steps will help you set up both the frontend and backend parts of the project.
+
+## Hosting Information
+
+I have decided to host the site on Vercel. If you encounter any difficulties with the setup:
+
+### Frontend link
+- [Accenture Song Project Frontend](https://accenture-song-project-frontend-bp4z7x4zd-nkebenyane.vercel.app/)
+
+### Backend link
+- [Server-Zeta-Neon Backend](https://server-zeta-neon.vercel.app/brands)
