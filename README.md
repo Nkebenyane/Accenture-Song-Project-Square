@@ -1,5 +1,15 @@
 # Accenture Song Project Square
 
+## Hosting Information
+
+I have decided to host the site on Vercel. If you encounter any difficulties with the setup:
+
+### Frontend link
+- [Accenture Song Project Frontend](https://accenture-song-project-frontend-bp4z7x4zd-nkebenyane.vercel.app/)
+
+### Backend link
+- [Server-Zeta-Neon Backend](https://server-zeta-neon.vercel.app/brands)
+
 ## Requirements
 
 ### Front-end
@@ -62,13 +72,3 @@
     ```
 
 These steps will help you set up both the frontend and backend parts of the project.
-
-## Hosting Information
-
-I have decided to host the site on Vercel. If you encounter any difficulties with the setup:
-
-### Frontend link
-- [Accenture Song Project Frontend](https://accenture-song-project-frontend-bp4z7x4zd-nkebenyane.vercel.app/)
-
-### Backend link
-- [Server-Zeta-Neon Backend](https://server-zeta-neon.vercel.app/brands)
