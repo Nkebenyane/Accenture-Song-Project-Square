@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-mongoose.connect(`mongodb+srv://vercel-admin-user:VLL460oyc9GSJCOU@cluster0.mdn5lnp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://vercel-admin-user:VLL460oyc9GSJCOU@cluster0.mdn5lnp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
     .then(() => {
         console.log('Connected to MongoDB');
 
