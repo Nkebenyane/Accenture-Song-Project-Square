@@ -118,9 +118,24 @@ async function insertInitialData() {
         console.error('Error inserting data:', err);
     }
 }
-app.use(cors({
-    origin: 'http://localhost:3000',
-}));
+
+// Allow requests from the specified origins
+const allowedOrigins = [
+    'https://accenture-song-project-frontend-bp4z7x4zd-nkebenyane.vercel.app',
+    'http://localhost:3000',
+  ];
+  
+  const corsOptions = {
+    origin: function (origin, callback) {
+      if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+  };
+  
+  app.use(cors(corsOptions));
 
 // Retrieve brands with filtering and sorting
 app.get('/brands', async (req, res) => {
